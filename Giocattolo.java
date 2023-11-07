@@ -4,14 +4,20 @@ class Giocattolo {
     private final String codiceGiocattolo;
     private String nomeGiocattolo;
     private double prezzo;
+    private int quantita;
     private int etaConsigliata;
 
-    public Giocattolo(String nomeGiocattolo, double prezzo, int etaConsigliata){
+    public Giocattolo(String nomeGiocattolo, double prezzo, int etaConsigliata, int quantita){
         this.nomeGiocattolo = nomeGiocattolo;
         this.prezzo = prezzo;
         this.etaConsigliata = etaConsigliata;
-        codiceGiocattolo = nomeGiocattolo + "_PROD_" + codiceGiocattoloProgressivo.toString();
+        this.quantita = quantita;
+        codiceGiocattolo = nomeGiocattolo.toUpperCase() + "_PROD_" + codiceGiocattoloProgressivo.toString();
         codiceGiocattoloProgressivo++;
+    }
+
+    public int getQuantita() {
+        return quantita;
     }
 
     public int getEtaConsigliata() {
@@ -52,6 +58,10 @@ class Giocattolo {
 
     public void setEtaConsigliata(int etaConsigliata) {
         this.etaConsigliata = etaConsigliata;
+    }
+
+    public void setQuantita(int quantita) {
+        this.quantita = quantita;
     }
 
 }
