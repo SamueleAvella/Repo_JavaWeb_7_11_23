@@ -24,7 +24,7 @@ Crea un'interfaccia utente semplice in console per interagire con l'utente, perm
  * Main
  */
 public class Main {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         
         Inventario inventario = new Inventario();
         Cliente admin = new Cliente("admin", "admin", "admin@bellapete.it", "admin", "admin", Permessi.ADMIN);
@@ -39,5 +39,11 @@ public class Main {
         inventario.addCustomer(new Cliente("Pippo", "Baudo", "pippo@bellapete.com", "pippo", "pippo"));
 
         
+    }*/
+
+    public static void main(String[] args) {
+
+        DbManager dbMan = new DbManager();
+        dbMan.openConnection();
     }
 }
