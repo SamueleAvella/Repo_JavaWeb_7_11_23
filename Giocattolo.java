@@ -64,4 +64,8 @@ class Giocattolo {
         this.quantita = quantita;
     }
 
+    public void decQuantita(){
+        this.quantita--;
+    }
+
 }

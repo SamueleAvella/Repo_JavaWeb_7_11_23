@@ -1,18 +1,22 @@
-public class Vendita extends RegistroVendite{
-    
-    private static Integer codiceVenditaProgressivo=1;
-    private final String codiceVendita; 
-    private Cliente acquirente;
-    private Giocattolo giocattoloAcquistato;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-    public Vendita(Cliente acquirente, Giocattolo giocattoloAcquistato){
+/**
+ * Vendita
+ */
+public class Vendita extends RegistroVendite{
+
+    private Cliente acquirente;
+    private Giocattolo acquisto;
+    private LocalDateTime dataAcquisto;
+
+    public Vendita(Cliente acquirente, Giocattolo acquisto, LocalDateTime dataAcquisto){
         this.acquirente = acquirente;
-        this.giocattoloAcquistato = giocattoloAcquistato;
-        codiceVendita = "SALE_" + codiceVenditaProgressivo.toString();
-        codiceVenditaProgressivo++;
+        this.acquisto = acquisto;
+        this.dataAcquisto = dataAcquisto;
     }
 
-
+    
 
 
 }

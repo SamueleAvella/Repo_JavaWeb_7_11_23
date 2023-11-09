@@ -24,12 +24,20 @@ Crea un'interfaccia utente semplice in console per interagire con l'utente, perm
  * Main
  */
 public class Main {
-
     public static void main(String[] args) {
         
-        //creare lista di vendite
+        Inventario inventario = new Inventario();
+        Cliente admin = new Cliente("admin", "admin", "admin@bellapete.it", "admin", "admin", Permessi.ADMIN);
+
+        inventario.addToy(new Giocattolo("spada laser", 12.5, 7, 13));
+        inventario.addToy(new Giocattolo("bambola", 25, 2, 30));
+        inventario.addToy(new Giocattolo("cubo di rubrik", 10, 13, 3));
+        inventario.addToy(new Giocattolo("puzzle", 15, 10, 23));
+
+        inventario.addCustomer(new Cliente("Samuele", "Avella", "samuele@bellapete.com", "samu", "samu"));
+        inventario.addCustomer(new Cliente("Giuseppe", "Billone", "giuseppe@bellapete.com", "giuse", "giuse"));
+        inventario.addCustomer(new Cliente("Pippo", "Baudo", "pippo@bellapete.com", "pippo", "pippo"));
 
         
-
     }
 }
